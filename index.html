@@ -1,545 +1,1996 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Omar Abdelwahab AI Engineer & Researcher</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root {
-  --bg: #000000;
-  --bg-elevated: #0a0a0a;
-  --bg-card: rgba(255,255,255,0.03);
-  --bg-card-hover: rgba(255,255,255,0.06);
-  --glass: rgba(255,255,255,0.05);
-  --glass-strong: rgba(255,255,255,0.08);
-  --glass-border: rgba(255,255,255,0.08);
-  --glass-border-hover: rgba(255,255,255,0.16);
-  --glass-shine: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 50%);
-  --text: #f5f5f7;
-  --text-secondary: #a1a1a6;
-  --text-tertiary: #6e6e73;
-  --accent: #0a84ff;
-  --accent-glow: rgba(10,132,255,0.15);
-  --green: #30d158;
-  --green-glow: rgba(48,209,88,0.15);
-  --orange: #ff9f0a;
-  --purple: #bf5af2;
-  --purple-glow: rgba(191,90,242,0.15);
-  --pink: #ff375f;
-  --teal: #64d2ff;
-  --indigo: #5e5ce6;
-  --font-display: 'Instrument Serif', Georgia, serif;
-  --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
-  --ease: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-  --radius: 24px;
-  --radius-sm: 16px;
-  --max-w: 1120px;
-}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
-::selection{background:var(--accent);color:#fff}
-a{text-decoration:none;color:inherit}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omar Abdelwahab AI Engineer & Researcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
 
-/* ═══ GRAIN ═══ */
-body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:0.018;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+    :root {
+      --bg: #000000;
+      --bg-elevated: #0a0a0a;
+      --bg-card: rgba(255, 255, 255, 0.03);
+      --bg-card-hover: rgba(255, 255, 255, 0.06);
+      --glass: rgba(255, 255, 255, 0.05);
+      --glass-strong: rgba(255, 255, 255, 0.08);
+      --glass-border: rgba(255, 255, 255, 0.08);
+      --glass-border-hover: rgba(255, 255, 255, 0.16);
+      --glass-shine: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 50%);
+      --text: #f5f5f7;
+      --text-secondary: #a1a1a6;
+      --text-tertiary: #6e6e73;
+      --accent: #0a84ff;
+      --accent-glow: rgba(10, 132, 255, 0.15);
+      --green: #30d158;
+      --green-glow: rgba(48, 209, 88, 0.15);
+      --orange: #ff9f0a;
+      --purple: #bf5af2;
+      --purple-glow: rgba(191, 90, 242, 0.15);
+      --pink: #ff375f;
+      --teal: #64d2ff;
+      --indigo: #5e5ce6;
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --radius: 24px;
+      --radius-sm: 16px;
+      --max-w: 1120px;
+    }
 
-/* ═══ GLASS HELPERS ═══ */
-.glass{background:var(--glass);backdrop-filter:blur(40px) saturate(1.5);-webkit-backdrop-filter:blur(40px) saturate(1.5);border:1px solid var(--glass-border);border-radius:var(--radius)}
-.glass-sm{background:var(--glass);backdrop-filter:blur(24px) saturate(1.3);-webkit-backdrop-filter:blur(24px) saturate(1.3);border:1px solid var(--glass-border);border-radius:var(--radius-sm)}
-.glass-hover{transition:all 0.4s var(--ease)}
-.glass-hover:hover{background:var(--glass-strong);border-color:var(--glass-border-hover);box-shadow:0 8px 32px rgba(0,0,0,0.4),inset 0 1px 0 rgba(255,255,255,0.06)}
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale
+    }
 
-/* ═══ CENTERED CONTAINER ═══ */
-.container{max-width:var(--max-w);margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden
+    }
 
-/* ═══ NAV ═══ */
-.nav{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:1000;width:calc(100% - 32px);max-width:900px;padding:0 8px;height:56px;display:flex;align-items:center;justify-content:space-between;background:rgba(28,28,30,0.72);backdrop-filter:blur(40px) saturate(1.8);-webkit-backdrop-filter:blur(40px) saturate(1.8);border:1px solid rgba(255,255,255,0.08);border-radius:100px;transition:all 0.5s var(--ease)}
-.nav-brand{font-family:var(--font-display);font-size:1.3rem;padding:0 16px;letter-spacing:-0.02em}
-.nav-brand em{font-style:italic;color:var(--accent)}
-.nav-menu{display:flex;align-items:center;gap:4px}
-.nav-link{font-size:0.78rem;font-weight:400;padding:8px 14px;border-radius:100px;color:var(--text-secondary);transition:all 0.3s;letter-spacing:0.02em}
-.nav-link:hover{color:var(--text);background:rgba(255,255,255,0.08)}
-.nav-cta{font-size:0.78rem;font-weight:500;padding:8px 20px;border-radius:100px;background:var(--accent);color:#fff;transition:all 0.3s var(--ease);margin-left:4px}
-.nav-cta:hover{filter:brightness(1.15);transform:scale(1.02)}
-.nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px 12px;position:relative;width:44px;height:44px}
-.nav-hamburger span{display:block;width:20px;height:1.5px;background:var(--text);position:absolute;left:12px;transition:all 0.35s var(--ease)}
-.nav-hamburger span:nth-child(1){top:15px}
-.nav-hamburger span:nth-child(2){top:21px}
-.nav-hamburger span:nth-child(3){top:27px}
-.nav-hamburger.active span:nth-child(1){top:21px;transform:rotate(45deg)}
-.nav-hamburger.active span:nth-child(2){opacity:0;transform:translateX(-8px)}
-.nav-hamburger.active span:nth-child(3){top:21px;transform:rotate(-45deg)}
+    ::selection {
+      background: var(--accent);
+      color: #fff
+    }
 
-/* ═══ HERO ═══ */
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;padding:120px 20px 80px}
-.hero-orbs{position:absolute;inset:0;pointer-events:none;overflow:hidden}
-.hero-orb{position:absolute;border-radius:50%;filter:blur(100px);opacity:0.2;animation:orbFloat 20s ease-in-out infinite}
-.orb-1{width:500px;height:500px;background:var(--accent);top:-15%;right:10%;animation-delay:0s}
-.orb-2{width:400px;height:400px;background:var(--purple);bottom:-10%;left:5%;animation-delay:-7s}
-.orb-3{width:350px;height:350px;background:var(--teal);top:30%;left:55%;opacity:0.12;animation-delay:-14s}
-@keyframes orbFloat{0%,100%{transform:translate(0,0)scale(1)}33%{transform:translate(40px,-35px)scale(1.06)}66%{transform:translate(-30px,25px)scale(0.95)}}
-.hero-content{position:relative;z-index:1;max-width:800px}
-.hero-badge{display:inline-flex;align-items:center;gap:10px;padding:8px 20px 8px 14px;border-radius:100px;background:rgba(48,209,88,0.08);border:1px solid rgba(48,209,88,0.15);font-size:0.76rem;font-weight:500;color:var(--green);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:36px;opacity:0;animation:fadeUp 0.7s var(--ease) 0.2s forwards}
-.hero-badge .pulse{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 8px rgba(48,209,88,0.5);animation:pulseAnim 2s ease-in-out infinite}
-@keyframes pulseAnim{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.75)}}
-.hero h1{font-family:var(--font-display);font-weight:400;font-size:clamp(3rem,7.5vw,6rem);line-height:1.0;letter-spacing:-0.035em;opacity:0;animation:fadeUp 0.8s var(--ease) 0.35s forwards}
-.hero h1 .shimmer{background:linear-gradient(90deg,var(--text),rgba(255,255,255,0.5),var(--text));background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:shimmerText 4s ease-in-out infinite}
-@keyframes shimmerText{0%{background-position:200% 0}100%{background-position:-200% 0}}
-.hero h1 em{font-style:italic;-webkit-text-fill-color:var(--accent);color:var(--accent)}
-.hero-sub{font-size:clamp(1rem,1.5vw,1.15rem);color:var(--text-secondary);max-width:580px;margin:24px auto 0;line-height:1.8;font-weight:300;opacity:0;animation:fadeUp 0.7s var(--ease) 0.5s forwards}
-.hero-buttons{display:flex;gap:12px;justify-content:center;margin-top:40px;flex-wrap:wrap;opacity:0;animation:fadeUp 0.7s var(--ease) 0.65s forwards}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:100px;font-family:var(--font-body);font-size:0.88rem;font-weight:500;cursor:pointer;border:none;transition:all 0.35s var(--ease)}
-.btn svg{width:16px;height:16px;flex-shrink:0}
-.btn-accent{background:var(--accent);color:#fff;box-shadow:0 4px 20px rgba(10,132,255,0.3)}
-.btn-accent:hover{filter:brightness(1.15);transform:translateY(-2px);box-shadow:0 8px 28px rgba(10,132,255,0.4)}
-.btn-glass{background:rgba(255,255,255,0.06);color:var(--text);border:1px solid var(--glass-border);backdrop-filter:blur(12px)}
-.btn-glass:hover{background:rgba(255,255,255,0.1);border-color:var(--glass-border-hover)}
-.hero-stats{display:flex;gap:48px;justify-content:center;margin-top:72px;padding-top:40px;border-top:1px solid var(--glass-border);opacity:0;animation:fadeUp 0.7s var(--ease) 0.8s forwards}
-.hero-stat-val{font-family:var(--font-display);font-size:2.6rem;font-weight:400;line-height:1;background:linear-gradient(135deg,var(--text),var(--text-secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero-stat-label{font-size:0.7rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.1em;margin-top:8px;font-weight:500}
-@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+    a {
+      text-decoration: none;
+      color: inherit
+    }
 
-/* ═══ SECTIONS ═══ */
-section{padding:clamp(80px,12vw,130px) 0}
-.section-tag{display:inline-flex;align-items:center;gap:10px;font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
-.section-tag::before{content:'';width:28px;height:1.5px;background:var(--accent)}
-.section-title{font-family:var(--font-display);font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight:400;line-height:1.12;letter-spacing:-0.025em}
-.section-desc{font-size:1rem;color:var(--text-secondary);max-width:520px;margin-top:14px;font-weight:300;line-height:1.7}
+    /* ═══ GRAIN ═══ */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      pointer-events: none;
+      opacity: 0.018;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")
+    }
 
-/* ═══ ABOUT ═══ */
-.about-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:72px;align-items:start;margin-top:56px}
-.about-prose p{color:var(--text-secondary);font-size:1rem;line-height:1.85;font-weight:300;margin-bottom:18px}
-.about-prose strong{color:var(--text);font-weight:500}
-.about-chips{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:32px}
-.about-chip{padding:18px;border-radius:var(--radius-sm);background:var(--glass);border:1px solid var(--glass-border);backdrop-filter:blur(16px);transition:all 0.3s var(--ease)}
-.about-chip:hover{border-color:var(--glass-border-hover);background:var(--glass-strong)}
-.about-chip-label{font-size:0.66rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.08em;font-weight:500}
-.about-chip-value{font-weight:500;margin-top:5px;font-size:0.9rem}
-.lang-row{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap}
-.lang-tag{display:flex;align-items:center;gap:8px;padding:10px 18px;border-radius:100px;background:var(--glass);border:1px solid var(--glass-border);font-size:0.82rem;backdrop-filter:blur(12px)}
-.lang-dot{width:8px;height:8px;border-radius:50%}
-.lang-level{color:var(--text-tertiary);font-size:0.76rem;margin-left:2px}
+    /* ═══ GLASS HELPERS ═══ */
+    .glass {
+      background: var(--glass);
+      backdrop-filter: blur(40px) saturate(1.5);
+      -webkit-backdrop-filter: blur(40px) saturate(1.5);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius)
+    }
 
-/* Code card */
-.code-card{border-radius:var(--radius);overflow:hidden;background:rgba(255,255,255,0.02);border:1px solid var(--glass-border);backdrop-filter:blur(24px);position:relative}
-.code-card::before{content:'';position:absolute;inset:0;background:var(--glass-shine);pointer-events:none;border-radius:var(--radius)}
-.code-top{padding:14px 20px;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.02);border-bottom:1px solid var(--glass-border)}
-.code-dot{width:10px;height:10px;border-radius:50%}
-.code-body{padding:28px;font-family:var(--font-mono);font-size:0.78rem;line-height:2.1}
-.ck{color:var(--purple)}.cf{color:var(--accent)}.cs{color:var(--green)}.cg{color:var(--orange)}.cb{color:var(--text-tertiary)}.cc{color:var(--text-tertiary)}
+    .glass-sm {
+      background: var(--glass);
+      backdrop-filter: blur(24px) saturate(1.3);
+      -webkit-backdrop-filter: blur(24px) saturate(1.3);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-sm)
+    }
 
-/* ═══ EXPERIENCE ═══ */
-.exp-bg{background:var(--bg-elevated)}
-.exp-timeline{max-width:800px;margin:56px auto 0;position:relative;padding-left:44px}
-.exp-timeline::before{content:'';position:absolute;left:6px;top:8px;bottom:8px;width:1px;background:linear-gradient(180deg,var(--accent),var(--glass-border) 70%,transparent)}
-.exp-item{padding-bottom:48px;position:relative}
-.exp-item:last-child{padding-bottom:0}
-.exp-dot{position:absolute;left:-44px;top:8px;width:13px;height:13px;border-radius:50%;background:var(--bg-elevated);border:2px solid var(--accent);box-shadow:0 0 0 5px var(--accent-glow)}
-.exp-date{font-size:0.7rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px}
-.exp-role{font-family:var(--font-display);font-size:1.4rem;line-height:1.3}
-.exp-company{color:var(--text-secondary);font-size:0.88rem;margin-top:4px;font-weight:300}
-.exp-desc{color:var(--text-secondary);font-size:0.88rem;line-height:1.8;margin-top:14px;font-weight:300;max-width:600px}
-.exp-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
-.exp-tag{padding:5px 14px;border-radius:100px;font-size:0.7rem;font-weight:500;background:var(--glass);border:1px solid var(--glass-border);color:var(--text-secondary)}
+    .glass-hover {
+      transition: all 0.4s var(--ease)
+    }
 
-/* ═══ PROJECTS ═══ */
-.projects-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:56px}
+    .glass-hover:hover {
+      background: var(--glass-strong);
+      border-color: var(--glass-border-hover);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.06)
+    }
 
-/* Featured */
-.pf-card{border-radius:var(--radius);overflow:hidden;background:var(--glass);border:1px solid var(--glass-border);backdrop-filter:blur(32px);display:grid;grid-template-columns:1.1fr 0.9fr;transition:all 0.5s var(--ease);position:relative}
-.pf-card::before{content:'';position:absolute;inset:0;background:var(--glass-shine);pointer-events:none}
-.pf-card:hover{border-color:var(--glass-border-hover);box-shadow:0 24px 80px rgba(0,0,0,0.4)}
-.pf-body{padding:44px;display:flex;flex-direction:column}
-.pf-visual{background:rgba(255,255,255,0.02);border-left:1px solid var(--glass-border);display:flex;align-items:center;justify-content:center;padding:36px;position:relative}
-.pf-code-wrap{width:100%;border-radius:var(--radius-sm);overflow:hidden;border:1px solid var(--glass-border);background:rgba(0,0,0,0.4)}
-.pf-code-bar{height:30px;background:rgba(255,255,255,0.03);border-bottom:1px solid var(--glass-border);display:flex;align-items:center;padding:0 12px;gap:6px}
-.pf-code-bar span{width:8px;height:8px;border-radius:50%}
-.pf-code-text{padding:20px;font-family:var(--font-mono);font-size:0.73rem;line-height:1.9;color:var(--text-secondary)}
+    /* ═══ CENTERED CONTAINER ═══ */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 clamp(20px, 4vw, 48px)
+    }
 
-/* Standard cards — 2-col */
-.p-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.p-card{border-radius:var(--radius);padding:36px;background:var(--glass);border:1px solid var(--glass-border);backdrop-filter:blur(24px);position:relative;display:flex;flex-direction:column;transition:all 0.5s var(--ease)}
-.p-card::before{content:'';position:absolute;inset:0;background:var(--glass-shine);pointer-events:none;border-radius:var(--radius)}
-.p-card:hover{border-color:var(--glass-border-hover);transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,0.35)}
+    /* ═══ NAV ═══ */
+    .nav {
+      position: fixed;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      width: calc(100% - 32px);
+      max-width: 900px;
+      padding: 0 8px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(28, 28, 30, 0.72);
+      backdrop-filter: blur(40px) saturate(1.8);
+      -webkit-backdrop-filter: blur(40px) saturate(1.8);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 100px;
+      transition: all 0.5s var(--ease)
+    }
 
-.p-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
-.p-icon{width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
-.p-links{display:flex;gap:6px}
-.p-link{width:34px;height:34px;border-radius:10px;background:rgba(255,255,255,0.04);border:1px solid var(--glass-border);display:flex;align-items:center;justify-content:center;transition:all 0.3s;color:var(--text-secondary);cursor:pointer}
-.p-link:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-glow)}
-.p-link svg{width:14px;height:14px}
-.p-cat{font-size:0.66rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;margin-top:22px}
-.p-name{font-family:var(--font-display);font-size:1.3rem;margin-top:8px;line-height:1.3}
-.p-desc{color:var(--text-secondary);font-size:0.86rem;line-height:1.75;margin-top:10px;font-weight:300;flex:1}
-.p-bullets{display:flex;flex-direction:column;gap:7px;margin-top:14px}
-.p-bullet{display:flex;align-items:flex-start;gap:9px;font-size:0.8rem;color:var(--text-secondary);line-height:1.5;font-weight:300}
-.p-bullet::before{content:'›';color:var(--accent);flex-shrink:0;font-weight:600;font-size:0.9rem;line-height:1.4}
-.p-tech{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px;padding-top:18px;border-top:1px solid var(--glass-border)}
-.p-tech span{padding:4px 12px;border-radius:100px;font-size:0.68rem;font-weight:500;background:rgba(255,255,255,0.04);border:1px solid var(--glass-border);color:var(--text-secondary)}
+    .nav-brand {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      padding: 0 16px;
+      letter-spacing: -0.02em
+    }
 
-/* color helpers */
-.ic-blue{background:var(--accent-glow);color:var(--accent)}
-.ic-purple{background:var(--purple-glow);color:var(--purple)}
-.ic-orange{background:rgba(255,159,10,0.12);color:var(--orange)}
-.ic-coral{background:rgba(255,55,95,0.1);color:var(--pink)}
-.cat-blue{color:var(--accent)}
-.cat-purple{color:var(--purple)}
-.cat-orange{color:var(--orange)}
-.cat-coral{color:var(--pink)}
+    .nav-brand em {
+      font-style: italic;
+      color: var(--accent)
+    }
 
-/* ═══ SKILLS ═══ */
-.skills-bg{background:var(--bg-elevated)}
-.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:56px}
-.sk-card{padding:32px;border-radius:var(--radius);background:var(--glass);border:1px solid var(--glass-border);backdrop-filter:blur(24px);transition:all 0.35s var(--ease);position:relative}
-.sk-card::before{content:'';position:absolute;inset:0;background:var(--glass-shine);pointer-events:none;border-radius:var(--radius)}
-.sk-card:hover{border-color:var(--glass-border-hover)}
-.sk-header{display:flex;align-items:center;gap:12px;margin-bottom:22px}
-.sk-icon{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:0.95rem}
-.sk-title{font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em}
-.sk-tags{display:flex;flex-wrap:wrap;gap:7px}
-.sk-tag{padding:8px 16px;border-radius:100px;font-size:0.8rem;font-weight:400;background:rgba(255,255,255,0.04);border:1px solid var(--glass-border);transition:all 0.3s;cursor:default}
-.sk-tag:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-glow)}
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 4px
+    }
 
-/* ═══ PUBLICATION ═══ */
-.pub-card{max-width:820px;margin-top:56px;padding:44px;border-radius:var(--radius);background:var(--glass);border:1px solid var(--glass-border);backdrop-filter:blur(24px);position:relative;overflow:hidden;transition:all 0.35s var(--ease)}
-.pub-card:hover{border-color:var(--glass-border-hover)}
-.pub-card::before{content:'';position:absolute;inset:0;background:var(--glass-shine);pointer-events:none}
-.pub-card::after{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--accent),var(--purple))}
-.pub-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:100px;background:var(--purple-glow);border:1px solid rgba(191,90,242,0.15);font-size:0.68rem;font-weight:600;color:var(--purple);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:18px;position:relative}
-.pub-name{font-family:var(--font-display);font-size:1.5rem;line-height:1.35;font-style:italic;position:relative}
-.pub-meta{color:var(--text-secondary);margin-top:14px;font-size:0.9rem;line-height:1.7;font-weight:300;position:relative}
-.pub-id{font-family:var(--font-mono);font-size:0.76rem;color:var(--text-tertiary);margin-top:12px;position:relative}
+    .nav-link {
+      font-size: 0.78rem;
+      font-weight: 400;
+      padding: 8px 14px;
+      border-radius: 100px;
+      color: var(--text-secondary);
+      transition: all 0.3s;
+      letter-spacing: 0.02em
+    }
 
-/* ═══ EDUCATION ═══ */
-.edu-bg{background:var(--bg-elevated)}
-.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:56px;max-width:860px}
-.edu-card{padding:32px;border-radius:var(--radius);background:var(--glass);border:1px solid var(--glass-border);backdrop-filter:blur(24px);transition:all 0.35s var(--ease);position:relative}
-.edu-card::before{content:'';position:absolute;inset:0;background:var(--glass-shine);pointer-events:none;border-radius:var(--radius)}
-.edu-card:hover{border-color:var(--glass-border-hover)}
-.edu-year{font-size:0.7rem;font-weight:600;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase}
-.edu-degree{font-family:var(--font-display);font-size:1.2rem;margin-top:10px;line-height:1.3}
-.edu-school{color:var(--text-secondary);font-size:0.86rem;margin-top:6px;font-weight:300}
-.edu-extra{color:var(--text-tertiary);font-size:0.8rem;margin-top:8px;font-style:italic}
+    .nav-link:hover {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.08)
+    }
 
-/* ═══ CONTACT ═══ */
-.contact-bg{background:var(--bg-elevated);border-top:1px solid var(--glass-border)}
-.contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
-.contact-cards{display:flex;flex-direction:column;gap:10px}
-.cc-link{display:flex;align-items:center;gap:16px;padding:20px 22px;border-radius:var(--radius-sm);background:var(--glass);border:1px solid var(--glass-border);backdrop-filter:blur(16px);transition:all 0.4s var(--ease)}
-.cc-link:hover{border-color:var(--accent);transform:translateX(6px);background:var(--glass-strong)}
-.cc-icon{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.05rem;flex-shrink:0}
-.cc-label{font-size:0.66rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.08em;font-weight:500}
-.cc-value{font-weight:500;font-size:0.9rem;margin-top:3px}
+    .nav-cta {
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 8px 20px;
+      border-radius: 100px;
+      background: var(--accent);
+      color: #fff;
+      transition: all 0.3s var(--ease);
+      margin-left: 4px
+    }
 
-/* ═══ FOOTER ═══ */
-footer{padding:32px 0;text-align:center;font-size:0.76rem;color:var(--text-tertiary);border-top:1px solid var(--glass-border)}
-footer a{color:var(--text-secondary);transition:color 0.3s;margin:0 12px}
-footer a:hover{color:var(--accent)}
+    .nav-cta:hover {
+      filter: brightness(1.15);
+      transform: scale(1.02)
+    }
 
-/* ═══ SCROLL ANIMATIONS ═══ */
-.sr{opacity:0;transform:translateY(40px);transition:opacity 0.9s var(--ease),transform 0.9s var(--ease)}
-.sr.v{opacity:1;transform:translateY(0)}
-.sr-d1{transition-delay:0.08s}.sr-d2{transition-delay:0.16s}.sr-d3{transition-delay:0.24s}.sr-d4{transition-delay:0.32s}
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px 12px;
+      position: relative;
+      width: 44px;
+      height: 44px
+    }
 
-/* ═══ RESPONSIVE ═══ */
-@media(max-width:900px){
-  .nav-menu{display:flex;flex-direction:column;position:absolute;top:calc(100% + 8px);left:0;right:0;background:rgba(28,28,30,0.94);backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);padding:16px;gap:4px;border-radius:var(--radius);border:1px solid var(--glass-border);opacity:0;transform:translateY(-12px) scale(0.97);pointer-events:none;transition:all 0.35s var(--ease);visibility:hidden}.nav-menu.open{opacity:1;transform:translateY(0) scale(1);pointer-events:all;visibility:visible}
-  .nav-menu.open .nav-link,.nav-menu.open .nav-cta{opacity:0;animation:menuSlideIn 0.3s var(--ease) forwards}
-  .nav-menu.open .nav-link:nth-child(1){animation-delay:0.05s}
-  .nav-menu.open .nav-link:nth-child(2){animation-delay:0.1s}
-  .nav-menu.open .nav-link:nth-child(3){animation-delay:0.15s}
-  .nav-menu.open .nav-link:nth-child(4){animation-delay:0.2s}
-  .nav-menu.open .nav-cta{animation-delay:0.25s}
-  @keyframes menuSlideIn{from{opacity:0;transform:translateX(-12px)}to{opacity:1;transform:translateX(0)}}
-  .nav-hamburger{display:block}
-  .about-grid,.contact-layout{grid-template-columns:1fr;gap:40px}
-  .pf-card,.p-row,.skills-grid,.edu-grid{grid-template-columns:1fr}
-  .pf-visual{border-left:none;border-top:1px solid var(--glass-border);min-height:240px}
-  .hero-stats{flex-wrap:wrap;gap:28px}
-}
-</style>
+    .nav-hamburger span {
+      display: block;
+      width: 20px;
+      height: 1.5px;
+      background: var(--text);
+      position: absolute;
+      left: 12px;
+      transition: all 0.35s var(--ease)
+    }
+
+    .nav-hamburger span:nth-child(1) {
+      top: 15px
+    }
+
+    .nav-hamburger span:nth-child(2) {
+      top: 21px
+    }
+
+    .nav-hamburger span:nth-child(3) {
+      top: 27px
+    }
+
+    .nav-hamburger.active span:nth-child(1) {
+      top: 21px;
+      transform: rotate(45deg)
+    }
+
+    .nav-hamburger.active span:nth-child(2) {
+      opacity: 0;
+      transform: translateX(-8px)
+    }
+
+    .nav-hamburger.active span:nth-child(3) {
+      top: 21px;
+      transform: rotate(-45deg)
+    }
+
+    /* ═══ HERO ═══ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      padding: 120px 20px 80px
+    }
+
+    .hero-orbs {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden
+    }
+
+    .hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.2;
+      animation: orbFloat 20s ease-in-out infinite
+    }
+
+    .orb-1 {
+      width: 500px;
+      height: 500px;
+      background: var(--accent);
+      top: -15%;
+      right: 10%;
+      animation-delay: 0s
+    }
+
+    .orb-2 {
+      width: 400px;
+      height: 400px;
+      background: var(--purple);
+      bottom: -10%;
+      left: 5%;
+      animation-delay: -7s
+    }
+
+    .orb-3 {
+      width: 350px;
+      height: 350px;
+      background: var(--teal);
+      top: 30%;
+      left: 55%;
+      opacity: 0.12;
+      animation-delay: -14s
+    }
+
+    @keyframes orbFloat {
+
+      0%,
+      100% {
+        transform: translate(0, 0)scale(1)
+      }
+
+      33% {
+        transform: translate(40px, -35px)scale(1.06)
+      }
+
+      66% {
+        transform: translate(-30px, 25px)scale(0.95)
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 20px 8px 14px;
+      border-radius: 100px;
+      background: rgba(48, 209, 88, 0.08);
+      border: 1px solid rgba(48, 209, 88, 0.15);
+      font-size: 0.76rem;
+      font-weight: 500;
+      color: var(--green);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 36px;
+      opacity: 0;
+      animation: fadeUp 0.7s var(--ease) 0.2s forwards
+    }
+
+    .hero-badge .pulse {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 8px rgba(48, 209, 88, 0.5);
+      animation: pulseAnim 2s ease-in-out infinite
+    }
+
+    @keyframes pulseAnim {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1)
+      }
+
+      50% {
+        opacity: 0.4;
+        transform: scale(0.75)
+      }
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(3rem, 7.5vw, 6rem);
+      line-height: 1.0;
+      letter-spacing: -0.035em;
+      opacity: 0;
+      animation: fadeUp 0.8s var(--ease) 0.35s forwards
+    }
+
+    .hero h1 .shimmer {
+      background: linear-gradient(90deg, var(--text), rgba(255, 255, 255, 0.5), var(--text));
+      background-size: 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmerText 4s ease-in-out infinite
+    }
+
+    @keyframes shimmerText {
+      0% {
+        background-position: 200% 0
+      }
+
+      100% {
+        background-position: -200% 0
+      }
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      -webkit-text-fill-color: var(--accent);
+      color: var(--accent)
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: var(--text-secondary);
+      max-width: 580px;
+      margin: 24px auto 0;
+      line-height: 1.8;
+      font-weight: 300;
+      opacity: 0;
+      animation: fadeUp 0.7s var(--ease) 0.5s forwards
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 40px;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.7s var(--ease) 0.65s forwards
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 100px;
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      transition: all 0.35s var(--ease)
+    }
+
+    .btn svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0
+    }
+
+    .btn-accent {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(10, 132, 255, 0.3)
+    }
+
+    .btn-accent:hover {
+      filter: brightness(1.15);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(10, 132, 255, 0.4)
+    }
+
+    .btn-glass {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(12px)
+    }
+
+    .btn-glass:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--glass-border-hover)
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 48px;
+      justify-content: center;
+      margin-top: 72px;
+      padding-top: 40px;
+      border-top: 1px solid var(--glass-border);
+      opacity: 0;
+      animation: fadeUp 0.7s var(--ease) 0.8s forwards
+    }
+
+    .hero-stat-val {
+      font-family: var(--font-display);
+      font-size: 2.6rem;
+      font-weight: 400;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--text), var(--text-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent
+    }
+
+    .hero-stat-label {
+      font-size: 0.7rem;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 8px;
+      font-weight: 500
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    /* ═══ SECTIONS ═══ */
+    section {
+      padding: clamp(80px, 12vw, 130px) 0
+    }
+
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px
+    }
+
+    .section-tag::before {
+      content: '';
+      width: 28px;
+      height: 1.5px;
+      background: var(--accent)
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+      font-weight: 400;
+      line-height: 1.12;
+      letter-spacing: -0.025em
+    }
+
+    .section-desc {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      max-width: 520px;
+      margin-top: 14px;
+      font-weight: 300;
+      line-height: 1.7
+    }
+
+    /* ═══ ABOUT ═══ */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 72px;
+      align-items: start;
+      margin-top: 56px
+    }
+
+    .about-prose p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.85;
+      font-weight: 300;
+      margin-bottom: 18px
+    }
+
+    .about-prose strong {
+      color: var(--text);
+      font-weight: 500
+    }
+
+    .about-chips {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 32px
+    }
+
+    .about-chip {
+      padding: 18px;
+      border-radius: var(--radius-sm);
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(16px);
+      transition: all 0.3s var(--ease)
+    }
+
+    .about-chip:hover {
+      border-color: var(--glass-border-hover);
+      background: var(--glass-strong)
+    }
+
+    .about-chip-label {
+      font-size: 0.66rem;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 500
+    }
+
+    .about-chip-value {
+      font-weight: 500;
+      margin-top: 5px;
+      font-size: 0.9rem
+    }
+
+    .lang-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 28px;
+      flex-wrap: wrap
+    }
+
+    .lang-tag {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 100px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      font-size: 0.82rem;
+      backdrop-filter: blur(12px)
+    }
+
+    .lang-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%
+    }
+
+    .lang-level {
+      color: var(--text-tertiary);
+      font-size: 0.76rem;
+      margin-left: 2px
+    }
+
+    /* Code card */
+    .code-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(24px);
+      position: relative
+    }
+
+    .code-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--glass-shine);
+      pointer-events: none;
+      border-radius: var(--radius)
+    }
+
+    .code-top {
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.02);
+      border-bottom: 1px solid var(--glass-border)
+    }
+
+    .code-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%
+    }
+
+    .code-body {
+      padding: 28px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      line-height: 2.1
+    }
+
+    .ck {
+      color: var(--purple)
+    }
+
+    .cf {
+      color: var(--accent)
+    }
+
+    .cs {
+      color: var(--green)
+    }
+
+    .cg {
+      color: var(--orange)
+    }
+
+    .cb {
+      color: var(--text-tertiary)
+    }
+
+    .cc {
+      color: var(--text-tertiary)
+    }
+
+    /* ═══ EXPERIENCE ═══ */
+    .exp-bg {
+      background: var(--bg-elevated)
+    }
+
+    .exp-timeline {
+      max-width: 800px;
+      margin: 56px auto 0;
+      position: relative;
+      padding-left: 44px
+    }
+
+    .exp-timeline::before {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 8px;
+      bottom: 8px;
+      width: 1px;
+      background: linear-gradient(180deg, var(--accent), var(--glass-border) 70%, transparent)
+    }
+
+    .exp-item {
+      padding-bottom: 48px;
+      position: relative
+    }
+
+    .exp-item:last-child {
+      padding-bottom: 0
+    }
+
+    .exp-dot {
+      position: absolute;
+      left: -44px;
+      top: 8px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: var(--bg-elevated);
+      border: 2px solid var(--accent);
+      box-shadow: 0 0 0 5px var(--accent-glow)
+    }
+
+    .exp-date {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px
+    }
+
+    .exp-role {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      line-height: 1.3
+    }
+
+    .exp-company {
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      margin-top: 4px;
+      font-weight: 300
+    }
+
+    .exp-desc {
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      line-height: 1.8;
+      margin-top: 14px;
+      font-weight: 300;
+      max-width: 600px
+    }
+
+    .exp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 16px
+    }
+
+    .exp-tag {
+      padding: 5px 14px;
+      border-radius: 100px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      color: var(--text-secondary)
+    }
+
+    /* ═══ PROJECTS ═══ */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 56px
+    }
+
+    /* Featured */
+    .pf-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(32px);
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      transition: all 0.5s var(--ease);
+      position: relative
+    }
+
+    .pf-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--glass-shine);
+      pointer-events: none
+    }
+
+    .pf-card:hover {
+      border-color: var(--glass-border-hover);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4)
+    }
+
+    .pf-body {
+      padding: 44px;
+      display: flex;
+      flex-direction: column
+    }
+
+    .pf-visual {
+      background: rgba(255, 255, 255, 0.02);
+      border-left: 1px solid var(--glass-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 36px;
+      position: relative
+    }
+
+    .pf-code-wrap {
+      width: 100%;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      border: 1px solid var(--glass-border);
+      background: rgba(0, 0, 0, 0.4)
+    }
+
+    .pf-code-bar {
+      height: 30px;
+      background: rgba(255, 255, 255, 0.03);
+      border-bottom: 1px solid var(--glass-border);
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      gap: 6px
+    }
+
+    .pf-code-bar span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%
+    }
+
+    .pf-code-text {
+      padding: 20px;
+      font-family: var(--font-mono);
+      font-size: 0.73rem;
+      line-height: 1.9;
+      color: var(--text-secondary)
+    }
+
+    /* Standard cards — 2-col */
+    .p-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px
+    }
+
+    .p-card {
+      border-radius: var(--radius);
+      padding: 36px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(24px);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.5s var(--ease)
+    }
+
+    .p-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--glass-shine);
+      pointer-events: none;
+      border-radius: var(--radius)
+    }
+
+    .p-card:hover {
+      border-color: var(--glass-border-hover);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35)
+    }
+
+    .p-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px
+    }
+
+    .p-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0
+    }
+
+    .p-links {
+      display: flex;
+      gap: 6px
+    }
+
+    .p-link {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--glass-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+      color: var(--text-secondary);
+      cursor: pointer
+    }
+
+    .p-link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-glow)
+    }
+
+    .p-link svg {
+      width: 14px;
+      height: 14px
+    }
+
+    .p-cat {
+      font-size: 0.66rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 22px
+    }
+
+    .p-name {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      margin-top: 8px;
+      line-height: 1.3
+    }
+
+    .p-desc {
+      color: var(--text-secondary);
+      font-size: 0.86rem;
+      line-height: 1.75;
+      margin-top: 10px;
+      font-weight: 300;
+      flex: 1
+    }
+
+    .p-bullets {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-top: 14px
+    }
+
+    .p-bullet {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      font-weight: 300
+    }
+
+    .p-bullet::before {
+      content: '›';
+      color: var(--accent);
+      flex-shrink: 0;
+      font-weight: 600;
+      font-size: 0.9rem;
+      line-height: 1.4
+    }
+
+    .p-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--glass-border)
+    }
+
+    .p-tech span {
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 0.68rem;
+      font-weight: 500;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--glass-border);
+      color: var(--text-secondary)
+    }
+
+    /* color helpers */
+    .ic-blue {
+      background: var(--accent-glow);
+      color: var(--accent)
+    }
+
+    .ic-purple {
+      background: var(--purple-glow);
+      color: var(--purple)
+    }
+
+    .ic-orange {
+      background: rgba(255, 159, 10, 0.12);
+      color: var(--orange)
+    }
+
+    .ic-coral {
+      background: rgba(255, 55, 95, 0.1);
+      color: var(--pink)
+    }
+
+    .cat-blue {
+      color: var(--accent)
+    }
+
+    .cat-purple {
+      color: var(--purple)
+    }
+
+    .cat-orange {
+      color: var(--orange)
+    }
+
+    .cat-coral {
+      color: var(--pink)
+    }
+
+    /* ═══ SKILLS ═══ */
+    .skills-bg {
+      background: var(--bg-elevated)
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 56px
+    }
+
+    .sk-card {
+      padding: 32px;
+      border-radius: var(--radius);
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(24px);
+      transition: all 0.35s var(--ease);
+      position: relative
+    }
+
+    .sk-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--glass-shine);
+      pointer-events: none;
+      border-radius: var(--radius)
+    }
+
+    .sk-card:hover {
+      border-color: var(--glass-border-hover)
+    }
+
+    .sk-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 22px
+    }
+
+    .sk-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem
+    }
+
+    .sk-title {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em
+    }
+
+    .sk-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px
+    }
+
+    .sk-tag {
+      padding: 8px 16px;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 400;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--glass-border);
+      transition: all 0.3s;
+      cursor: default
+    }
+
+    .sk-tag:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-glow)
+    }
+
+    /* ═══ PUBLICATION ═══ */
+    .pub-card {
+      max-width: 820px;
+      margin-top: 56px;
+      padding: 44px;
+      border-radius: var(--radius);
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(24px);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s var(--ease)
+    }
+
+    .pub-card:hover {
+      border-color: var(--glass-border-hover)
+    }
+
+    .pub-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--glass-shine);
+      pointer-events: none
+    }
+
+    .pub-card::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, var(--accent), var(--purple))
+    }
+
+    .pub-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 100px;
+      background: var(--purple-glow);
+      border: 1px solid rgba(191, 90, 242, 0.15);
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: var(--purple);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 18px;
+      position: relative
+    }
+
+    .pub-name {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      line-height: 1.35;
+      font-style: italic;
+      position: relative
+    }
+
+    .pub-meta {
+      color: var(--text-secondary);
+      margin-top: 14px;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      font-weight: 300;
+      position: relative
+    }
+
+    .pub-id {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: var(--text-tertiary);
+      margin-top: 12px;
+      position: relative
+    }
+
+    /* ═══ EDUCATION ═══ */
+    .edu-bg {
+      background: var(--bg-elevated)
+    }
+
+    .edu-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 56px;
+      max-width: 860px
+    }
+
+    .edu-card {
+      padding: 32px;
+      border-radius: var(--radius);
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(24px);
+      transition: all 0.35s var(--ease);
+      position: relative
+    }
+
+    .edu-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--glass-shine);
+      pointer-events: none;
+      border-radius: var(--radius)
+    }
+
+    .edu-card:hover {
+      border-color: var(--glass-border-hover)
+    }
+
+    .edu-year {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      text-transform: uppercase
+    }
+
+    .edu-degree {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      margin-top: 10px;
+      line-height: 1.3
+    }
+
+    .edu-school {
+      color: var(--text-secondary);
+      font-size: 0.86rem;
+      margin-top: 6px;
+      font-weight: 300
+    }
+
+    .edu-extra {
+      color: var(--text-tertiary);
+      font-size: 0.8rem;
+      margin-top: 8px;
+      font-style: italic
+    }
+
+    /* ═══ CONTACT ═══ */
+    .contact-bg {
+      background: var(--bg-elevated);
+      border-top: 1px solid var(--glass-border)
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: start
+    }
+
+    .contact-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
+    .cc-link {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 22px;
+      border-radius: var(--radius-sm);
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(16px);
+      transition: all 0.4s var(--ease)
+    }
+
+    .cc-link:hover {
+      border-color: var(--accent);
+      transform: translateX(6px);
+      background: var(--glass-strong)
+    }
+
+    .cc-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.05rem;
+      flex-shrink: 0
+    }
+
+    .cc-label {
+      font-size: 0.66rem;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 500
+    }
+
+    .cc-value {
+      font-weight: 500;
+      font-size: 0.9rem;
+      margin-top: 3px
+    }
+
+    /* ═══ FOOTER ═══ */
+    footer {
+      padding: 32px 0;
+      text-align: center;
+      font-size: 0.76rem;
+      color: var(--text-tertiary);
+      border-top: 1px solid var(--glass-border)
+    }
+
+    footer a {
+      color: var(--text-secondary);
+      transition: color 0.3s;
+      margin: 0 12px
+    }
+
+    footer a:hover {
+      color: var(--accent)
+    }
+
+    /* ═══ SCROLL ANIMATIONS ═══ */
+    .sr {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.9s var(--ease), transform 0.9s var(--ease)
+    }
+
+    .sr.v {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+    .sr-d1 {
+      transition-delay: 0.08s
+    }
+
+    .sr-d2 {
+      transition-delay: 0.16s
+    }
+
+    .sr-d3 {
+      transition-delay: 0.24s
+    }
+
+    .sr-d4 {
+      transition-delay: 0.32s
+    }
+
+    /* ═══ RESPONSIVE ═══ */
+    @media(max-width:900px) {
+      .nav-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        right: 0;
+        background: rgba(28, 28, 30, 0.94);
+        backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
+        padding: 16px;
+        gap: 4px;
+        border-radius: var(--radius);
+        border: 1px solid var(--glass-border);
+        opacity: 0;
+        transform: translateY(-12px) scale(0.97);
+        pointer-events: none;
+        transition: all 0.35s var(--ease);
+        visibility: hidden
+      }
+
+      .nav-menu.open {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        pointer-events: all;
+        visibility: visible
+      }
+
+      .nav-menu.open .nav-link,
+      .nav-menu.open .nav-cta {
+        opacity: 0;
+        animation: menuSlideIn 0.3s var(--ease) forwards
+      }
+
+      .nav-menu.open .nav-link:nth-child(1) {
+        animation-delay: 0.05s
+      }
+
+      .nav-menu.open .nav-link:nth-child(2) {
+        animation-delay: 0.1s
+      }
+
+      .nav-menu.open .nav-link:nth-child(3) {
+        animation-delay: 0.15s
+      }
+
+      .nav-menu.open .nav-link:nth-child(4) {
+        animation-delay: 0.2s
+      }
+
+      .nav-menu.open .nav-cta {
+        animation-delay: 0.25s
+      }
+
+      @keyframes menuSlideIn {
+        from {
+          opacity: 0;
+          transform: translateX(-12px)
+        }
+
+        to {
+          opacity: 1;
+          transform: translateX(0)
+        }
+      }
+
+      .nav-hamburger {
+        display: block
+      }
+
+      .about-grid,
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 40px
+      }
+
+      .pf-card,
+      .p-row,
+      .skills-grid,
+      .edu-grid {
+        grid-template-columns: 1fr
+      }
+
+      .pf-visual {
+        border-left: none;
+        border-top: 1px solid var(--glass-border);
+        min-height: 240px
+      }
+
+      .hero-stats {
+        flex-wrap: wrap;
+        gap: 28px
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- NAV -->
-<nav class="nav">
-  <a href="#" class="nav-brand">Omar<em>.</em></a>
-  <div class="nav-menu" id="navMenu">
-    <a href="#about" class="nav-link">About</a>
-    <a href="#experience" class="nav-link">Experience</a>
-    <a href="#projects" class="nav-link">Projects</a>
-    <a href="#skills" class="nav-link">Skills</a>
-    <a href="#contact" class="nav-cta">Let's Talk</a>
-  </div>
-  <button class="nav-hamburger" id="navToggle" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="#" class="nav-brand">Omar<em>.</em></a>
+    <div class="nav-menu" id="navMenu">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#contact" class="nav-cta">Let's Talk</a>
+    </div>
+    <button class="nav-hamburger" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-orbs"><div class="hero-orb orb-1"></div><div class="hero-orb orb-2"></div><div class="hero-orb orb-3"></div></div>
-  <div class="hero-content">
-    <div class="hero-avatar" style="opacity:0;animation:fadeUp 0.6s var(--ease) 0.05s forwards"><img src="data:image/jpeg;base64,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" alt="Omar Abdelwahab" style="width:100px;height:100px;border-radius:50%;object-fit:cover;border:2px solid var(--glass-border);box-shadow:0 8px 32px rgba(0,0,0,0.5);margin-bottom:28px"></div>
-    <div class="hero-badge"><span class="pulse"></span> Open to AI/ML Opportunities in Germany</div>
-    <h1>Building <em>Intelligent</em><br><span class="shimmer">Systems That Ship</span></h1>
-    <p class="hero-sub">M.Sc. AI candidate at BTU Cottbus-Senftenberg. I work at the intersection of Machine Learning, Computer Vision, and Generative AI — from decoding brain signals to deploying production LLM pipelines with Siemens.</p>
-    <div class="hero-buttons">
-      <a href="#contact" class="btn btn-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Get in Touch</a>
-      <a href="https://github.com/OT75" target="_blank" class="btn btn-glass"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub</a>
-      <a href="https://www.linkedin.com/in/omar-tarek-52b261255/" target="_blank" class="btn btn-glass"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-orbs">
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+      <div class="hero-orb orb-3"></div>
     </div>
-    <div class="hero-stats">
-      <div><div class="hero-stat-val">2+</div><div class="hero-stat-label">Years in AI/ML</div></div>
-      <div><div class="hero-stat-val">1</div><div class="hero-stat-label">IEEE Publication</div></div>
-      <div><div class="hero-stat-val">26</div><div class="hero-stat-label">GitHub Repos</div></div>
-      <div><div class="hero-stat-val">3</div><div class="hero-stat-label">Languages</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about"><div class="container">
-  <div class="sr"><div class="section-tag">About</div><div class="section-title">Engineer. Researcher. Builder.</div></div>
-  <div class="about-grid">
-    <div class="about-prose sr sr-d1">
-      <p>I'm <strong>Omar Abdelwahab</strong>, an AI Engineer and M.Sc. Artificial Intelligence student at <strong>BTU Cottbus-Senftenberg</strong> in Germany. I hold a B.Sc. in Computer Engineering from <strong>Ain Shams University</strong> (dual degree with University of East London), with a specialization in AI &amp; Data Science.</p>
-      <p>My work spans the full AI spectrum — from <strong>brain-computer interfaces</strong> and EEG signal classification at BTU's Neuroadaptive Lab, to <strong>LLM fine-tuning</strong> and <strong>3D reconstruction</strong> in a Siemens-sponsored IEEE-published project. I also build RAG systems, computer vision pipelines, and full-stack AI applications.</p>
-      <p>I'm passionate about building AI systems that ship to production — not notebooks that sit on a shelf.</p>
-      <div class="about-chips">
-        <div class="about-chip"><div class="about-chip-label">Location</div><div class="about-chip-value">Berlin / Cottbus, Germany</div></div>
-        <div class="about-chip"><div class="about-chip-label">Degree</div><div class="about-chip-value">M.Sc. AI (ongoing)</div></div>
-        <div class="about-chip"><div class="about-chip-label">Focus</div><div class="about-chip-value">ML · CV · GenAI · BCI</div></div>
-        <div class="about-chip"><div class="about-chip-label">Status</div><div class="about-chip-value">Open to Work</div></div>
+    <div class="hero-content">
+      <div class="hero-avatar" style="opacity:0;animation:fadeUp 0.6s var(--ease) 0.05s forwards"><img
+          src="data:image/jpeg;base64,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"
+          alt="Omar Abdelwahab"
+          style="width:100px;height:100px;border-radius:50%;object-fit:cover;border:2px solid var(--glass-border);box-shadow:0 8px 32px rgba(0,0,0,0.5);margin-bottom:28px">
       </div>
-      <div class="lang-row">
-        <div class="lang-tag"><span class="lang-dot" style="background:var(--orange)"></span>Arabic <span class="lang-level">Native</span></div>
-        <div class="lang-tag"><span class="lang-dot" style="background:var(--accent)"></span>English <span class="lang-level">C1</span></div>
-        <div class="lang-tag"><span class="lang-dot" style="background:var(--green)"></span>German <span class="lang-level">B1</span></div>
+      <div class="hero-badge"><span class="pulse"></span> Open to AI/ML Opportunities in Germany</div>
+      <h1>Building <em>Intelligent</em><br><span class="shimmer">Systems That Ship</span></h1>
+      <p class="hero-sub">M.Sc. AI candidate at BTU Cottbus-Senftenberg. I work at the intersection of Machine Learning,
+        Computer Vision, and Generative AI — from decoding brain signals to deploying production LLM pipelines with
+        Siemens.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>Get in Touch</a>
+        <a href="https://github.com/OT75" target="_blank" class="btn btn-glass"><svg viewBox="0 0 24 24"
+            fill="currentColor">
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+          </svg>GitHub</a>
+        <a href="https://www.linkedin.com/in/omar-tarek-52b261255/" target="_blank" class="btn btn-glass"><svg
+            viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>LinkedIn</a>
       </div>
-    </div>
-    <div class="sr sr-d2">
-      <div class="code-card">
-        <div class="code-top">
-          <span class="code-dot" style="background:#ff5f57"></span><span class="code-dot" style="background:#febc2e"></span><span class="code-dot" style="background:#28c840"></span>
-          <span style="font-size:.7rem;color:var(--text-tertiary);margin-left:8px">omar_tarek.py</span>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-val">2+</div>
+          <div class="hero-stat-label">Years in AI/ML</div>
         </div>
-        <div class="code-body">
-          <span class="ck">class</span> <span class="cf">AIEngineer</span><span class="cb">:</span><br>
-          &nbsp;&nbsp;<span class="cg">name</span> = <span class="cs">"Omar Abdelwahab"</span><br>
-          &nbsp;&nbsp;<span class="cg">role</span> = <span class="cs">"AI/ML Engineer"</span><br>
-          &nbsp;&nbsp;<span class="cg">university</span> = <span class="cs">"BTU Cottbus"</span><br><br>
-          &nbsp;&nbsp;<span class="cg">domains</span> = <span class="cb">[</span><br>
-          &nbsp;&nbsp;&nbsp;&nbsp;<span class="cs">"Machine Learning"</span>,<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;<span class="cs">"Computer Vision"</span>,<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;<span class="cs">"LLMs &amp; GenAI"</span>,<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;<span class="cs">"Brain-Computer Interfaces"</span>,<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;<span class="cs">"MLOps"</span><br>
-          &nbsp;&nbsp;<span class="cb">]</span><br><br>
-          &nbsp;&nbsp;<span class="ck">def</span> <span class="cf">philosophy</span><span class="cb">(</span><span class="cg">self</span><span class="cb">):</span><br>
-          &nbsp;&nbsp;&nbsp;&nbsp;<span class="ck">return</span> <span class="cs">"Build it. Ship it. Iterate."</span>
+        <div>
+          <div class="hero-stat-val">1</div>
+          <div class="hero-stat-label">IEEE Publication</div>
+        </div>
+        <div>
+          <div class="hero-stat-val">27</div>
+          <div class="hero-stat-label">GitHub Repos</div>
+        </div>
+        <div>
+          <div class="hero-stat-val">3</div>
+          <div class="hero-stat-label">Languages</div>
         </div>
       </div>
     </div>
-  </div>
-</div></section>
+  </section>
 
-<!-- EXPERIENCE -->
-<section id="experience" class="exp-bg"><div class="container">
-  <div class="sr"><div class="section-tag">Experience</div><div class="section-title">Where I've Worked</div></div>
-  <div class="exp-timeline sr sr-d1">
-    <div class="exp-item">
-      <div class="exp-dot"></div>
-      <div class="exp-date">2025 — Present</div>
-      <div class="exp-role">Student Assistant — Neuroadaptive BCI Lab</div>
-      <div class="exp-company">BTU Cottbus-Senftenberg · Prof. Dr. Thorsten O. Zander</div>
-      <div class="exp-desc">Conducting EEG and BCI research focused on decoding cognitive and mental states from brain signals. Designing and evaluating ML classifiers (LDA, SVM) for real-time neural signal classification.</div>
-      <div class="exp-tags"><span class="exp-tag">EEG</span><span class="exp-tag">BCI</span><span class="exp-tag">LDA / SVM</span><span class="exp-tag">MATLAB</span><span class="exp-tag">Signal Processing</span></div>
-    </div>
-    <div class="exp-item">
-      <div class="exp-dot"></div>
-      <div class="exp-date">2024</div>
-      <div class="exp-role">AI Engineer — Intelligent Heritage Explorer</div>
-      <div class="exp-company">Siemens EDA · IEEE Published</div>
-      <div class="exp-desc">Led AI development for an IEEE-published Siemens-sponsored project. Implemented NeRF vs Gaussian Splatting for 3D reconstruction. Fine-tuned LLaMA 2 &amp; 3 via Ollama. Integrated Gemini Pro Vision API. Deployed on cloud GPUs via Vast.AI.</div>
-      <div class="exp-tags"><span class="exp-tag">NeRF</span><span class="exp-tag">Gaussian Splatting</span><span class="exp-tag">LLaMA 2/3</span><span class="exp-tag">Ollama</span><span class="exp-tag">Gemini</span><span class="exp-tag">Vast.AI</span></div>
-    </div>
-  </div>
-</div></section>
-
-<!-- PROJECTS -->
-<section id="projects"><div class="container">
-  <div class="sr"><div class="section-tag">Projects</div><div class="section-title">Selected Work</div><div class="section-desc">AI-focused projects spanning RAG systems, computer vision, LLM applications, and BCI research.</div></div>
-  <div class="projects-grid">
-
-    <!-- Featured: Heritage Explorer -->
-    <div class="pf-card sr sr-d1">
-      <div class="pf-body">
-        <div class="p-top"><div class="p-icon ic-coral">🏛️</div><div class="p-links"><a href="https://drive.google.com/drive/u/0/folders/1sOXXEgCzN6SOVI8QGUTPysu0J1GL4aV5" target="_blank" class="p-link" title="Project Files"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></div></div>
-        <div class="p-cat cat-coral">IEEE Published · Siemens Partnership</div>
-        <div class="p-name">Intelligent Heritage Explorer</div>
-        <div class="p-desc">AI-powered immersive heritage exploration combining 3D scene reconstruction with intelligent natural language interaction. Published at IEEE ITC 2024.</div>
-        <div class="p-bullets">
-          <div class="p-bullet">NeRF benchmarked against Gaussian Splatting for photorealistic 3D reconstruction</div>
-          <div class="p-bullet">Fine-tuned LLaMA 2 &amp; 3 via Ollama for custom heritage guide generation</div>
-          <div class="p-bullet">Gemini Pro Vision API for multimodal image understanding</div>
-          <div class="p-bullet">Full pipeline deployed on cloud GPUs via Vast.AI</div>
-        </div>
-        <div class="p-tech"><span>NeRF</span><span>Gaussian Splatting</span><span>LLaMA</span><span>Ollama</span><span>Gemini</span><span>Vast.AI</span></div>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="sr">
+        <div class="section-tag">About</div>
+        <div class="section-title">Engineer. Researcher. Builder.</div>
       </div>
-      <div class="pf-visual">
-        <div class="pf-code-wrap">
-          <div class="pf-code-bar"><span style="background:#ff5f57"></span><span style="background:#febc2e"></span><span style="background:#28c840"></span></div>
-          <div class="pf-code-text">
-            <span class="cc"># heritage_explorer.py</span><br>
-            <span class="ck">from</span> nerf <span class="ck">import</span> <span class="cf">NeuralRadianceField</span><br>
-            <span class="ck">from</span> ollama <span class="ck">import</span> <span class="cf">LLaMA3</span><br><br>
-            <span class="cg">scene</span> = NeuralRadianceField(<span class="cs">"pyramid"</span>)<br>
-            <span class="cg">guide</span> = LLaMA3(<span class="cs">"heritage-guide"</span>)<br><br>
-            <span class="cg">model_3d</span> = scene.<span class="cf">render</span>()<br>
-            <span class="cg">story</span> = guide.<span class="cf">describe</span>(model_3d)
+      <div class="about-grid">
+        <div class="about-prose sr sr-d1">
+          <p>I'm <strong>Omar Abdelwahab</strong>, an AI Engineer and M.Sc. Artificial Intelligence student at
+            <strong>BTU Cottbus-Senftenberg</strong> in Germany. I hold a B.Sc. in Computer Engineering from <strong>Ain
+              Shams University</strong> (dual degree with University of East London), with a specialization in AI &amp;
+            Data Science.
+          </p>
+          <p>My work spans the full AI spectrum — from <strong>brain-computer interfaces</strong> and EEG signal
+            classification at BTU's Neuroadaptive Lab, to <strong>LLM fine-tuning</strong> and <strong>3D
+              reconstruction</strong> in a Siemens-sponsored IEEE-published project. I also build RAG systems, computer
+            vision pipelines, and full-stack AI applications.</p>
+          <p>I'm passionate about building AI systems that ship to production — not notebooks that sit on a shelf.</p>
+          <div class="about-chips">
+            <div class="about-chip">
+              <div class="about-chip-label">Location</div>
+              <div class="about-chip-value">Berlin / Cottbus, Germany</div>
+            </div>
+            <div class="about-chip">
+              <div class="about-chip-label">Degree</div>
+              <div class="about-chip-value">M.Sc. AI (ongoing)</div>
+            </div>
+            <div class="about-chip">
+              <div class="about-chip-label">Focus</div>
+              <div class="about-chip-value">ML · CV · GenAI · BCI</div>
+            </div>
+            <div class="about-chip">
+              <div class="about-chip-label">Status</div>
+              <div class="about-chip-value">Open to Work</div>
+            </div>
+          </div>
+          <div class="lang-row">
+            <div class="lang-tag"><span class="lang-dot" style="background:var(--orange)"></span>Arabic <span
+                class="lang-level">Native</span></div>
+            <div class="lang-tag"><span class="lang-dot" style="background:var(--accent)"></span>English <span
+                class="lang-level">C1</span></div>
+            <div class="lang-tag"><span class="lang-dot" style="background:var(--green)"></span>German <span
+                class="lang-level">B1</span></div>
+          </div>
+        </div>
+        <div class="sr sr-d2">
+          <div class="code-card">
+            <div class="code-top">
+              <span class="code-dot" style="background:#ff5f57"></span><span class="code-dot"
+                style="background:#febc2e"></span><span class="code-dot" style="background:#28c840"></span>
+              <span style="font-size:.7rem;color:var(--text-tertiary);margin-left:8px">omar_tarek.py</span>
+            </div>
+            <div class="code-body">
+              <span class="ck">class</span> <span class="cf">AIEngineer</span><span class="cb">:</span><br>
+              &nbsp;&nbsp;<span class="cg">name</span> = <span class="cs">"Omar Abdelwahab"</span><br>
+              &nbsp;&nbsp;<span class="cg">role</span> = <span class="cs">"AI/ML Engineer"</span><br>
+              &nbsp;&nbsp;<span class="cg">university</span> = <span class="cs">"BTU Cottbus"</span><br><br>
+              &nbsp;&nbsp;<span class="cg">domains</span> = <span class="cb">[</span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="cs">"Machine Learning"</span>,<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="cs">"Computer Vision"</span>,<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="cs">"LLMs &amp; GenAI"</span>,<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="cs">"Brain-Computer Interfaces"</span>,<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="cs">"MLOps"</span><br>
+              &nbsp;&nbsp;<span class="cb">]</span><br><br>
+              &nbsp;&nbsp;<span class="ck">def</span> <span class="cf">philosophy</span><span class="cb">(</span><span
+                class="cg">self</span><span class="cb">):</span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="ck">return</span> <span class="cs">"Build it. Ship it.
+                Iterate."</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="p-row">
-      <!-- Raggy AI -->
-      <div class="p-card sr sr-d1">
-        <div class="p-top"><div class="p-icon ic-blue">🧠</div><div class="p-links"><a href="https://github.com/OT75/Raggy" target="_blank" class="p-link" title="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a></div></div>
-        <div class="p-cat cat-blue">RAG · LLM Architecture</div>
-        <div class="p-name">Raggy AI — Glassmorphic RAG Assistant</div>
-        <div class="p-desc">Next-gen document assistant with Hybrid "Scenario B" logic that intelligently switches between RAG for doc queries and standard LLM for general chat.</div>
-        <div class="p-bullets">
-          <div class="p-bullet">Dual-brain: Groq (Llama 3.3) for speed, GPT-4o for precision</div>
-          <div class="p-bullet">FAISS vector search across multiple PDF knowledge bases</div>
-          <div class="p-bullet">Glassmorphic Streamlit UI with voice-to-text &amp; pop-out doc manager</div>
-        </div>
-        <div class="p-tech"><span>Python</span><span>FAISS</span><span>Groq</span><span>GPT-4o</span><span>Streamlit</span><span>LangChain</span></div>
+  <!-- EXPERIENCE -->
+  <section id="experience" class="exp-bg">
+    <div class="container">
+      <div class="sr">
+        <div class="section-tag">Experience</div>
+        <div class="section-title">Where I've Worked</div>
       </div>
-
-      <!-- MyChatbot -->
-      <div class="p-card sr sr-d2">
-        <div class="p-top"><div class="p-icon ic-purple">💬</div><div class="p-links"><a href="https://github.com/OT75/MyChatbot" target="_blank" class="p-link" title="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a></div></div>
-        <div class="p-cat cat-purple">LLM · Custom Models</div>
-        <div class="p-name">MyChatbot — Custom LLM Interface</div>
-        <div class="p-desc">Desktop GUI chatbot powered by Ollama API with custom-trained language models including a personalized tour guide persona.</div>
-        <div class="p-bullets">
-          <div class="p-bullet">Custom model configuration via Ollama for domain-specific personas</div>
-          <div class="p-bullet">Sleek dark-themed GUI with real-time streaming</div>
-          <div class="p-bullet">Persistent context-aware chat history</div>
+      <div class="exp-timeline sr sr-d1">
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-date">2025 — Present</div>
+          <div class="exp-role">Student Assistant — Neuroadaptive BCI Lab</div>
+          <div class="exp-company">BTU Cottbus-Senftenberg · Prof. Dr. Thorsten O. Zander</div>
+          <div class="exp-desc">Conducting EEG and BCI research focused on decoding cognitive and mental states from
+            brain signals. Designing and evaluating ML classifiers (LDA, SVM) for real-time neural signal
+            classification.</div>
+          <div class="exp-tags"><span class="exp-tag">EEG</span><span class="exp-tag">BCI</span><span
+              class="exp-tag">LDA / SVM</span><span class="exp-tag">MATLAB</span><span class="exp-tag">Signal
+              Processing</span></div>
         </div>
-        <div class="p-tech"><span>Python</span><span>Ollama API</span><span>Tkinter</span><span>LLMs</span></div>
-      </div>
-    </div>
-
-    <div class="p-row">
-      <!-- Sudoku OCR -->
-      <div class="p-card sr sr-d1">
-        <div class="p-top"><div class="p-icon ic-orange">🔢</div><div class="p-links"><a href="https://github.com/OT75/Sudoku-Solver--OCR-and-Image-Processing" target="_blank" class="p-link" title="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a></div></div>
-        <div class="p-cat cat-orange">Classical Computer Vision · OCR</div>
-        <div class="p-name">Sudoku OCR Solver</div>
-        <div class="p-desc">End-to-end pipeline extracting Sudoku puzzles from photographs using classical CV, then solving them with full visualization.</div>
-        <div class="p-bullets">
-          <div class="p-bullet">Hough Transform + morphological ops for grid detection</div>
-          <div class="p-bullet">Template matching for digit recognition</div>
-          <div class="p-bullet">Backtracking solver with step-by-step visualization</div>
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-date">2024</div>
+          <div class="exp-role">AI Engineer — Intelligent Heritage Explorer</div>
+          <div class="exp-company">Siemens EDA · IEEE Published</div>
+          <div class="exp-desc">Led AI development for an IEEE-published Siemens-sponsored project. Implemented NeRF vs
+            Gaussian Splatting for 3D reconstruction. Fine-tuned LLaMA 2 &amp; 3 via Ollama. Integrated Gemini Pro
+            Vision API. Deployed on cloud GPUs via Vast.AI.</div>
+          <div class="exp-tags"><span class="exp-tag">NeRF</span><span class="exp-tag">Gaussian Splatting</span><span
+              class="exp-tag">LLaMA 2/3</span><span class="exp-tag">Ollama</span><span
+              class="exp-tag">Gemini</span><span class="exp-tag">Vast.AI</span></div>
         </div>
-        <div class="p-tech"><span>Python</span><span>OpenCV</span><span>NumPy</span><span>Matplotlib</span></div>
-      </div>
-
-      <!-- Leaf Classifier -->
-      <div class="p-card sr sr-d2">
-        <div class="p-top"><div class="p-icon" style="background:rgba(48,209,88,0.1);color:var(--green)">🌿</div><div class="p-links"><a href="https://github.com/OT75/Leaf-Classification" target="_blank" class="p-link" title="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a></div></div>
-        <div class="p-cat" style="color:var(--green)">Deep Learning · CNN</div>
-        <div class="p-name">Leaf Classifier — CNN Model</div>
-        <div class="p-desc">Custom CNN architecture for leaf species classification with a full preprocessing, augmentation, and evaluation pipeline.</div>
-        <div class="p-bullets">
-          <div class="p-bullet">Designed CNN architecture from scratch with full preprocessing</div>
-          <div class="p-bullet">Hyperparameter tuning and model evaluation</div>
-          <div class="p-bullet">Data augmentation and performance visualization</div>
-        </div>
-        <div class="p-tech"><span>Python</span><span>TensorFlow</span><span>CNN</span><span>OpenCV</span></div>
       </div>
     </div>
+  </section>
 
-  </div>
-</div></section>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="sr">
+        <div class="section-tag">Projects</div>
+        <div class="section-title">Selected Work</div>
+        <div class="section-desc">AI-focused projects spanning RAG systems, computer vision, LLM applications, and BCI
+          research.</div>
+      </div>
+      <div class="projects-grid">
 
-<!-- SKILLS -->
-<section id="skills" class="skills-bg"><div class="container">
-  <div class="sr"><div class="section-tag">Skills</div><div class="section-title">Technical Toolkit</div></div>
-  <div class="skills-grid">
-    <div class="sk-card sr"><div class="sk-header"><div class="sk-icon ic-orange">🤖</div><div class="sk-title">AI / Machine Learning</div></div><div class="sk-tags"><span class="sk-tag">Machine Learning</span><span class="sk-tag">Deep Learning</span><span class="sk-tag">Computer Vision</span><span class="sk-tag">LLMs</span><span class="sk-tag">Generative AI</span><span class="sk-tag">RAG Systems</span><span class="sk-tag">NLP</span><span class="sk-tag">BCI / EEG</span></div></div>
-    <div class="sk-card sr sr-d1"><div class="sk-header"><div class="sk-icon ic-blue">💻</div><div class="sk-title">Programming</div></div><div class="sk-tags"><span class="sk-tag">Python</span><span class="sk-tag">C++</span><span class="sk-tag">Java</span><span class="sk-tag">SQL</span><span class="sk-tag">JavaScript</span><span class="sk-tag">TypeScript</span><span class="sk-tag">Dart</span><span class="sk-tag">VHDL</span><span class="sk-tag">MATLAB</span></div></div>
-    <div class="sk-card sr sr-d2"><div class="sk-header"><div class="sk-icon" style="background:rgba(48,209,88,0.1);color:var(--green)">🛠</div><div class="sk-title">Tools & Frameworks</div></div><div class="sk-tags"><span class="sk-tag">FAISS</span><span class="sk-tag">Streamlit</span><span class="sk-tag">Docker</span><span class="sk-tag">FastAPI</span><span class="sk-tag">MLflow</span><span class="sk-tag">AWS</span><span class="sk-tag">Git</span><span class="sk-tag">Linux</span><span class="sk-tag">Ollama</span><span class="sk-tag">OpenCV</span></div></div>
-    <div class="sk-card sr sr-d3"><div class="sk-header"><div class="sk-icon ic-purple">🌐</div><div class="sk-title">Web & Mobile</div></div><div class="sk-tags"><span class="sk-tag">HTML / CSS</span><span class="sk-tag">Node.js</span><span class="sk-tag">Angular</span><span class="sk-tag">React</span><span class="sk-tag">Flutter</span><span class="sk-tag">Firebase</span></div></div>
-  </div>
-</div></section>
+        <!-- Featured: Heritage Explorer -->
+        <div class="pf-card sr sr-d1">
+          <div class="pf-body">
+            <div class="p-top">
+              <div class="p-icon ic-coral">🏛️</div>
+              <div class="p-links"><a
+                  href="https://drive.google.com/drive/u/0/folders/1sOXXEgCzN6SOVI8QGUTPysu0J1GL4aV5" target="_blank"
+                  class="p-link" title="Project Files"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg></a></div>
+            </div>
+            <div class="p-cat cat-coral">IEEE Published · Siemens Partnership</div>
+            <div class="p-name">Intelligent Heritage Explorer</div>
+            <div class="p-desc">AI-powered immersive heritage exploration combining 3D scene reconstruction with
+              intelligent natural language interaction. Published at IEEE ITC 2024.</div>
+            <div class="p-bullets">
+              <div class="p-bullet">NeRF benchmarked against Gaussian Splatting for photorealistic 3D reconstruction
+              </div>
+              <div class="p-bullet">Fine-tuned LLaMA 2 &amp; 3 via Ollama for custom heritage guide generation</div>
+              <div class="p-bullet">Gemini Pro Vision API for multimodal image understanding</div>
+              <div class="p-bullet">Full pipeline deployed on cloud GPUs via Vast.AI</div>
+            </div>
+            <div class="p-tech"><span>NeRF</span><span>Gaussian
+                Splatting</span><span>LLaMA</span><span>Ollama</span><span>Gemini</span><span>Vast.AI</span></div>
+          </div>
+          <div class="pf-visual">
+            <div class="pf-code-wrap">
+              <div class="pf-code-bar"><span style="background:#ff5f57"></span><span
+                  style="background:#febc2e"></span><span style="background:#28c840"></span></div>
+              <div class="pf-code-text">
+                <span class="cc"># heritage_explorer.py</span><br>
+                <span class="ck">from</span> nerf <span class="ck">import</span> <span
+                  class="cf">NeuralRadianceField</span><br>
+                <span class="ck">from</span> ollama <span class="ck">import</span> <span
+                  class="cf">LLaMA3</span><br><br>
+                <span class="cg">scene</span> = NeuralRadianceField(<span class="cs">"pyramid"</span>)<br>
+                <span class="cg">guide</span> = LLaMA3(<span class="cs">"heritage-guide"</span>)<br><br>
+                <span class="cg">model_3d</span> = scene.<span class="cf">render</span>()<br>
+                <span class="cg">story</span> = guide.<span class="cf">describe</span>(model_3d)
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- AutoVision API -->
+        <div class="p-card sr sr-d1">
+          <div class="p-top">
+            <div class="p-icon ic-orange">🚗</div>
+            <div class="p-links"><a href="https://github.com/OT75/autovision-api" target="_blank" class="p-link"
+                title="GitHub"><svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg></a></div>
+          </div>
+          <div class="p-cat cat-orange">Computer Vision · MLOps · API</div>
+          <div class="p-name">AutoVision API</div>
+          <div class="p-desc">Traffic and vehicle detection API powered by YOLOv8 and FastAPI, supporting images, video,
+            and real-time webcam streaming. Fine-tuned on traffic data, deployed to AWS.</div>
+          <div class="p-bullets">
+            <div class="p-bullet">YOLOv8 fine-tuned on Roboflow dataset with MLflow experiment tracking</div>
+            <div class="p-bullet">Real-time WebSocket stream + video endpoint with annotated output</div>
+            <div class="p-bullet">Full CI/CD pipeline — pytest (32 tests), GitHub Actions, GHCR, AWS ECR + EC2</div>
+          </div>
+          <div class="p-tech">
+            <span>Python</span><span>YOLOv8</span><span>FastAPI</span><span>MLflow</span><span>Docker</span><span>AWS</span>
+          </div>
+        </div>
 
-<!-- PUBLICATION -->
-<section id="publication"><div class="container">
-  <div class="sr"><div class="section-tag">Research</div><div class="section-title">Publication</div></div>
-  <a href="https://ieeexplore.ieee.org/document/10620592" target="_blank" style="display:block">
-  <div class="pub-card sr sr-d1">
-    <div class="pub-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>IEEE ITC 2024</div>
-    <div class="pub-name">Navigating the World with an Intelligent Tourist Guide Using Generative AI</div>
-    <div class="pub-meta">Combining NeRF 3D reconstruction, LLM fine-tuning (LLaMA 2/3, Mistral), and multimodal vision APIs for immersive heritage exploration. Siemens EDA-sponsored.</div>
-    <div class="pub-id">IEEE ID: 10620592</div>
-  </div>
-  </a>
-</div></section>
+        <div class="p-row">
+          <!-- Raggy AI -->
+          <div class="p-card sr sr-d1">
+            <div class="p-top">
+              <div class="p-icon ic-blue">🧠</div>
+              <div class="p-links"><a href="https://github.com/OT75/Raggy" target="_blank" class="p-link"
+                  title="GitHub"><svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg></a></div>
+            </div>
+            <div class="p-cat cat-blue">RAG · LLM Architecture</div>
+            <div class="p-name">Raggy AI — Glassmorphic RAG Assistant</div>
+            <div class="p-desc">Next-gen document assistant with Hybrid "Scenario B" logic that intelligently switches
+              between RAG for doc queries and standard LLM for general chat.</div>
+            <div class="p-bullets">
+              <div class="p-bullet">Dual-brain: Groq (Llama 3.3) for speed, GPT-4o for precision</div>
+              <div class="p-bullet">FAISS vector search across multiple PDF knowledge bases</div>
+              <div class="p-bullet">Glassmorphic Streamlit UI with voice-to-text &amp; pop-out doc manager</div>
+            </div>
+            <div class="p-tech">
+              <span>Python</span><span>FAISS</span><span>Groq</span><span>GPT-4o</span><span>Streamlit</span><span>LangChain</span>
+            </div>
+          </div>
 
-<!-- EDUCATION -->
-<section id="education" class="edu-bg"><div class="container">
-  <div class="sr"><div class="section-tag">Education</div><div class="section-title">Academic Background</div></div>
-  <div class="edu-grid">
-    <div class="edu-card sr"><div class="edu-year">2024 — Present</div><div class="edu-degree">M.Sc. Artificial Intelligence</div><div class="edu-school">BTU Cottbus-Senftenberg, Germany</div></div>
-    <div class="edu-card sr sr-d1"><div class="edu-year">2019 — 2024</div><div class="edu-degree">B.Sc. Computer Engineering &amp; Software Systems</div><div class="edu-school">Ain Shams University / University of East London</div><div class="edu-extra">Minor: Artificial Intelligence &amp; Data Science</div></div>
-  </div>
-</div></section>
+          <!-- MyChatbot -->
+          <div class="p-card sr sr-d2">
+            <div class="p-top">
+              <div class="p-icon ic-purple">💬</div>
+              <div class="p-links"><a href="https://github.com/OT75/MyChatbot" target="_blank" class="p-link"
+                  title="GitHub"><svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg></a></div>
+            </div>
+            <div class="p-cat cat-purple">LLM · Custom Models</div>
+            <div class="p-name">MyChatbot — Custom LLM Interface</div>
+            <div class="p-desc">Desktop GUI chatbot powered by Ollama API with custom-trained language models including
+              a personalized tour guide persona.</div>
+            <div class="p-bullets">
+              <div class="p-bullet">Custom model configuration via Ollama for domain-specific personas</div>
+              <div class="p-bullet">Sleek dark-themed GUI with real-time streaming</div>
+              <div class="p-bullet">Persistent context-aware chat history</div>
+            </div>
+            <div class="p-tech"><span>Python</span><span>Ollama API</span><span>Tkinter</span><span>LLMs</span></div>
+          </div>
+        </div>
 
-<!-- CONTACT -->
-<section id="contact" class="contact-bg"><div class="container">
-  <div class="contact-layout">
-    <div class="sr">
-      <div class="section-tag">Contact</div>
-      <div class="section-title">Let's Build<br>Something <em style="font-family:var(--font-display);font-style:italic;color:var(--accent)">Together</em></div>
-      <p style="color:var(--text-secondary);font-size:1rem;line-height:1.8;margin-top:16px;font-weight:300;max-width:420px">I'm actively looking for AI/ML opportunities in Germany — Werkstudent roles, research collaborations, or exciting projects.</p>
+        <div class="p-row">
+
+          <!-- Leaf Classifier -->
+          <div class="p-card sr sr-d2">
+            <div class="p-top">
+              <div class="p-icon" style="background:rgba(48,209,88,0.1);color:var(--green)">🌿</div>
+              <div class="p-links"><a href="https://github.com/OT75/Leaf-Classification" target="_blank" class="p-link"
+                  title="GitHub"><svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg></a></div>
+            </div>
+            <div class="p-cat" style="color:var(--green)">Deep Learning · CNN</div>
+            <div class="p-name">Leaf Classifier — CNN Model</div>
+            <div class="p-desc">Custom CNN architecture for leaf species classification with a full preprocessing,
+              augmentation, and evaluation pipeline.</div>
+            <div class="p-bullets">
+              <div class="p-bullet">Designed CNN architecture from scratch with full preprocessing</div>
+              <div class="p-bullet">Hyperparameter tuning and model evaluation</div>
+              <div class="p-bullet">Data augmentation and performance visualization</div>
+            </div>
+            <div class="p-tech"><span>Python</span><span>TensorFlow</span><span>CNN</span><span>OpenCV</span></div>
+          </div>
+        </div>
+
+      </div>
     </div>
-    <div class="contact-cards sr sr-d2">
-      <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;Omartarek456&#64;gmail&#46;com" class="cc-link"><div class="cc-icon ic-orange">✉</div><div><div class="cc-label">Email</div><div class="cc-value">Omartarek456&#64;gmail.com</div></div></a>
-      <a href="https://www.linkedin.com/in/omar-tarek-52b261255/" target="_blank" class="cc-link"><div class="cc-icon ic-blue">in</div><div><div class="cc-label">LinkedIn</div><div class="cc-value">Omar Tarek</div></div></a>
-      <a href="https://github.com/OT75" target="_blank" class="cc-link"><div class="cc-icon ic-purple">⌂</div><div><div class="cc-label">GitHub</div><div class="cc-value">github.com/OT75</div></div></a>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="skills-bg">
+    <div class="container">
+      <div class="sr">
+        <div class="section-tag">Skills</div>
+        <div class="section-title">Technical Toolkit</div>
+      </div>
+      <div class="skills-grid">
+        <div class="sk-card sr">
+          <div class="sk-header">
+            <div class="sk-icon ic-orange">🤖</div>
+            <div class="sk-title">AI / Machine Learning</div>
+          </div>
+          <div class="sk-tags"><span class="sk-tag">Machine Learning</span><span class="sk-tag">Deep
+              Learning</span><span class="sk-tag">Computer Vision</span><span class="sk-tag">LLMs</span><span
+              class="sk-tag">Generative AI</span><span class="sk-tag">RAG Systems</span><span
+              class="sk-tag">NLP</span><span class="sk-tag">BCI / EEG</span></div>
+        </div>
+        <div class="sk-card sr sr-d1">
+          <div class="sk-header">
+            <div class="sk-icon ic-blue">💻</div>
+            <div class="sk-title">Programming</div>
+          </div>
+          <div class="sk-tags"><span class="sk-tag">Python</span><span class="sk-tag">C++</span><span
+              class="sk-tag">Java</span><span class="sk-tag">SQL</span><span class="sk-tag">JavaScript</span><span
+              class="sk-tag">TypeScript</span><span class="sk-tag">Dart</span><span class="sk-tag">VHDL</span><span
+              class="sk-tag">MATLAB</span></div>
+        </div>
+        <div class="sk-card sr sr-d2">
+          <div class="sk-header">
+            <div class="sk-icon" style="background:rgba(48,209,88,0.1);color:var(--green)">🛠</div>
+            <div class="sk-title">Tools & Frameworks</div>
+          </div>
+          <div class="sk-tags"><span class="sk-tag">FAISS</span><span class="sk-tag">Streamlit</span><span
+              class="sk-tag">Docker</span><span class="sk-tag">FastAPI</span><span class="sk-tag">MLflow</span><span
+              class="sk-tag">AWS</span><span class="sk-tag">Git</span><span class="sk-tag">Linux</span><span
+              class="sk-tag">Ollama</span><span class="sk-tag">OpenCV</span></div>
+        </div>
+        <div class="sk-card sr sr-d3">
+          <div class="sk-header">
+            <div class="sk-icon ic-purple">🌐</div>
+            <div class="sk-title">Web & Mobile</div>
+          </div>
+          <div class="sk-tags"><span class="sk-tag">HTML / CSS</span><span class="sk-tag">Node.js</span><span
+              class="sk-tag">Angular</span><span class="sk-tag">React</span><span class="sk-tag">Flutter</span><span
+              class="sk-tag">Firebase</span></div>
+        </div>
+      </div>
     </div>
-  </div>
-</div></section>
+  </section>
 
-<!-- FOOTER -->
-<footer><div class="container">
-  <p>&copy; 2026 Omar Tarek<br><a href="https://github.com/OT75" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/omar-tarek-52b261255/" target="_blank">LinkedIn</a><a href="mailto:Omartarek456&#64;gmail.com">Email</a></p>
-</div></footer>
+  <!-- PUBLICATION -->
+  <section id="publication">
+    <div class="container">
+      <div class="sr">
+        <div class="section-tag">Research</div>
+        <div class="section-title">Publication</div>
+      </div>
+      <a href="https://ieeexplore.ieee.org/document/10620592" target="_blank" style="display:block">
+        <div class="pub-card sr sr-d1">
+          <div class="pub-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+            </svg>IEEE ITC 2024</div>
+          <div class="pub-name">Navigating the World with an Intelligent Tourist Guide Using Generative AI</div>
+          <div class="pub-meta">Combining NeRF 3D reconstruction, LLM fine-tuning (LLaMA 2/3, Mistral), and multimodal
+            vision APIs for immersive heritage exploration. Siemens EDA-sponsored.</div>
+          <div class="pub-id">IEEE ID: 10620592</div>
+        </div>
+      </a>
+    </div>
+  </section>
 
-<script>
-// Nav scroll
-window.addEventListener('scroll',function(){document.querySelector('.nav').style.background=window.scrollY>60?'rgba(28,28,30,0.88)':'rgba(28,28,30,0.72)'});
+  <!-- EDUCATION -->
+  <section id="education" class="edu-bg">
+    <div class="container">
+      <div class="sr">
+        <div class="section-tag">Education</div>
+        <div class="section-title">Academic Background</div>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card sr">
+          <div class="edu-year">2024 — Present</div>
+          <div class="edu-degree">M.Sc. Artificial Intelligence</div>
+          <div class="edu-school">BTU Cottbus-Senftenberg, Germany</div>
+        </div>
+        <div class="edu-card sr sr-d1">
+          <div class="edu-year">2019 — 2024</div>
+          <div class="edu-degree">B.Sc. Computer Engineering &amp; Software Systems</div>
+          <div class="edu-school">Ain Shams University / University of East London</div>
+          <div class="edu-extra">Minor: Artificial Intelligence &amp; Data Science</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-// Hamburger toggle
-var navToggle=document.getElementById('navToggle');
-var navMenu=document.getElementById('navMenu');
-navToggle.addEventListener('click',function(){navToggle.classList.toggle('active');navMenu.classList.toggle('open')});
+  <!-- CONTACT -->
+  <section id="contact" class="contact-bg">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="sr">
+          <div class="section-tag">Contact</div>
+          <div class="section-title">Let's Build<br>Something <em
+              style="font-family:var(--font-display);font-style:italic;color:var(--accent)">Together</em></div>
+          <p
+            style="color:var(--text-secondary);font-size:1rem;line-height:1.8;margin-top:16px;font-weight:300;max-width:420px">
+            I'm actively looking for AI/ML opportunities in Germany — Werkstudent roles, research collaborations, or
+            exciting projects.</p>
+        </div>
+        <div class="contact-cards sr sr-d2">
+          <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;Omartarek456&#64;gmail&#46;com" class="cc-link">
+            <div class="cc-icon ic-orange">✉</div>
+            <div>
+              <div class="cc-label">Email</div>
+              <div class="cc-value">Omartarek456&#64;gmail.com</div>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/omar-tarek-52b261255/" target="_blank" class="cc-link">
+            <div class="cc-icon ic-blue">in</div>
+            <div>
+              <div class="cc-label">LinkedIn</div>
+              <div class="cc-value">Omar Tarek</div>
+            </div>
+          </a>
+          <a href="https://github.com/OT75" target="_blank" class="cc-link">
+            <div class="cc-icon ic-purple">⌂</div>
+            <div>
+              <div class="cc-label">GitHub</div>
+              <div class="cc-value">github.com/OT75</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-// Scroll reveal
-var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('v')})},{threshold:0.06,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.sr').forEach(function(el){obs.observe(el)});
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Omar Tarek<br><a href="https://github.com/OT75" target="_blank">GitHub</a><a
+          href="https://www.linkedin.com/in/omar-tarek-52b261255/" target="_blank">LinkedIn</a><a
+          href="mailto:Omartarek456&#64;gmail.com">Email</a></p>
+    </div>
+  </footer>
 
-// Smooth scroll + close menu
-document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'});navMenu.classList.remove('open');navToggle.classList.remove('active')})});
-</script>
+  <script>
+    // Nav scroll
+    window.addEventListener('scroll', function () { document.querySelector('.nav').style.background = window.scrollY > 60 ? 'rgba(28,28,30,0.88)' : 'rgba(28,28,30,0.72)' });
+
+    // Hamburger toggle
+    var navToggle = document.getElementById('navToggle');
+    var navMenu = document.getElementById('navMenu');
+    navToggle.addEventListener('click', function () { navToggle.classList.toggle('active'); navMenu.classList.toggle('open') });
+
+    // Scroll reveal
+    var obs = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('v') }) }, { threshold: 0.06, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.sr').forEach(function (el) { obs.observe(el) });
+
+    // Smooth scroll + close menu
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); var t = document.querySelector(a.getAttribute('href')); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); navMenu.classList.remove('open'); navToggle.classList.remove('active') }) });
+  </script>
 </body>
+
 </html>
